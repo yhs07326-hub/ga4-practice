@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>검색 결과 | Daily Bean</title>
+<!-- ① GA4 연결: 측정 ID는 assets/ga4-config.js 한 곳에만 넣습니다 (모든 페이지 공통) -->
+<script src="assets/ga4-config.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="search">
+<div class="practice-bar">GA4 실습용 가상 쇼핑몰입니다. 실제 판매·결제·개인정보 저장은 없습니다.
+  <button type="button" data-log-toggle>이벤트 로그 보기</button></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html" data-nav="로고">Daily<span>Bean</span></a>
+  <nav class="gnb">
+    <a href="index.html#products" data-nav="원두">원두</a>
+    <a href="index.html#story" data-nav="브랜드 이야기">브랜드 이야기</a>
+    <a href="index.html#faq" data-nav="FAQ">FAQ</a>
+    <a href="contact.html" data-nav="구독 상담">구독 상담</a>
+  </nav>
+  <form class="search" action="search.html" method="get" role="search">
+    <input name="q" placeholder="원두 검색 (예: 예가체프)" aria-label="검색어">
+    <button type="submit">검색</button>
+  </form>
+  <a class="cart-link" href="cart.html" data-nav="장바구니">장바구니 <b id="cart-count">0</b></a>
+</div></header>
+<main>
+
+<section><div class="wrap">
+  <p class="eyebrow">Search</p>
+  <h1>"<span id="search-term"></span>" 검색 결과</h1>
+  <p class="sub">주소창 끝에 <code>?q=검색어</code>가 붙어 있죠? GA4가 이걸 보고 view_search_results 를 자동으로 기록합니다.</p>
+  <div class="grid" id="search-results"></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div>
+    <a class="logo" href="index.html" style="color:#fff">Daily<span>Bean</span></a>
+    <p>매주 볶은 원두를 문 앞까지. (가상 브랜드)</p>
+    <p><a href="assets/daily-bean-brochure.pdf" download>원두 가이드 PDF 받기</a></p>
+  </div>
+  <div>
+    <strong>고객센터</strong>
+    <ul>
+      <li><a href="tel:010-0000-0000">전화 문의 010-0000-0000</a></li>
+      <li><a href="#" id="kakao-chat">카카오톡 상담하기</a></li>
+      <li><a href="contact.html" data-cta="footer">구독 상담 신청</a></li>
+    </ul>
+  </div>
+  <div>
+    <strong>SNS · 매장</strong>
+    <ul>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a></li>
+      <li><a href="https://map.naver.com/" target="_blank" rel="noopener">네이버 지도에서 매장 보기</a></li>
+    </ul>
+  </div>
+  <p class="legal">이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않으며, 표기된 상품·가격·후기·연락처는 예시입니다.
+  입력한 내용은 어디에도 저장되지 않습니다. 방문 통계는 Google Analytics 4로 익명 집계될 수 있습니다.</p>
+</div></footer>
+<script src="assets/track.js"></script>
+<script src="assets/shop.js"></script>
+<script src="assets/events.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>

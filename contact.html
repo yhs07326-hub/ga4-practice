@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>구독 상담 신청 | Daily Bean</title>
+<!-- ① GA4 연결: 측정 ID는 assets/ga4-config.js 한 곳에만 넣습니다 (모든 페이지 공통) -->
+<script src="assets/ga4-config.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="contact">
+<div class="practice-bar">GA4 실습용 가상 쇼핑몰입니다. 실제 판매·결제·개인정보 저장은 없습니다.
+  <button type="button" data-log-toggle>이벤트 로그 보기</button></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html" data-nav="로고">Daily<span>Bean</span></a>
+  <nav class="gnb">
+    <a href="index.html#products" data-nav="원두">원두</a>
+    <a href="index.html#story" data-nav="브랜드 이야기">브랜드 이야기</a>
+    <a href="index.html#faq" data-nav="FAQ">FAQ</a>
+    <a href="contact.html" data-nav="구독 상담">구독 상담</a>
+  </nav>
+  <form class="search" action="search.html" method="get" role="search">
+    <input name="q" placeholder="원두 검색 (예: 예가체프)" aria-label="검색어">
+    <button type="submit">검색</button>
+  </form>
+  <a class="cart-link" href="cart.html" data-nav="장바구니">장바구니 <b id="cart-count">0</b></a>
+</div></header>
+<main>
+
+<section><div class="wrap" style="max-width:640px">
+  <p class="eyebrow">Consulting</p>
+  <h1>무료 구독 상담 신청</h1>
+  <p class="sub">취향을 알려 주시면 바리스타가 맞는 원두와 구독 주기를 추천해 드립니다.</p>
+  <form id="lead-form" class="form-box" novalidate>
+    <div class="field"><label for="lead-name">이름</label><input id="lead-name" autocomplete="off" required placeholder="예시 이름"></div>
+    <div class="field"><label for="lead-phone">연락처</label><input id="lead-phone" autocomplete="off" required placeholder="010-0000-0000"></div>
+    <div class="field"><label for="lead-interest">관심 있는 것</label>
+      <select id="lead-interest">
+        <option value="개인 구독">개인 구독</option>
+        <option value="사무실 납품">사무실 납품</option>
+        <option value="선물">선물</option>
+      </select></div>
+    <div class="field"><label for="lead-msg">하고 싶은 말 (선택)</label><textarea id="lead-msg" rows="3"></textarea></div>
+    <button class="btn btn-primary" type="submit">상담 신청하기</button>
+    <p class="note">연습용 폼입니다. 입력한 내용은 저장되거나 전송되지 않습니다.</p>
+  </form>
+</div></section>
+<div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="pm-title">
+  <div class="box">
+    <h3 id="pm-title">개인정보 안내 (연습용)</h3>
+    <ol>
+      <li>이 폼은 수업 실습용이며 입력한 이름·연락처는 어디에도 저장·전송되지 않습니다.</li>
+      <li>확인을 누르면 입력값은 즉시 지워지고 신청 완료 화면으로 이동합니다.</li>
+      <li>방문 수, 버튼 클릭 같은 익명 방문 통계를 분석 도구(GA4)로 집계할 수 있습니다. 이 통계에는 입력하신 이름·연락처가 포함되지 않습니다.</li>
+    </ol>
+    <p style="display:flex;gap:8px;justify-content:flex-end">
+      <button class="btn btn-ghost btn-sm" type="button" id="privacy-cancel">취소</button>
+      <button class="btn btn-primary btn-sm" type="button" id="privacy-ok">확인하고 신청</button>
+    </p>
+  </div>
+</div>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div>
+    <a class="logo" href="index.html" style="color:#fff">Daily<span>Bean</span></a>
+    <p>매주 볶은 원두를 문 앞까지. (가상 브랜드)</p>
+    <p><a href="assets/daily-bean-brochure.pdf" download>원두 가이드 PDF 받기</a></p>
+  </div>
+  <div>
+    <strong>고객센터</strong>
+    <ul>
+      <li><a href="tel:010-0000-0000">전화 문의 010-0000-0000</a></li>
+      <li><a href="#" id="kakao-chat">카카오톡 상담하기</a></li>
+      <li><a href="contact.html" data-cta="footer">구독 상담 신청</a></li>
+    </ul>
+  </div>
+  <div>
+    <strong>SNS · 매장</strong>
+    <ul>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a></li>
+      <li><a href="https://map.naver.com/" target="_blank" rel="noopener">네이버 지도에서 매장 보기</a></li>
+    </ul>
+  </div>
+  <p class="legal">이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않으며, 표기된 상품·가격·후기·연락처는 예시입니다.
+  입력한 내용은 어디에도 저장되지 않습니다. 방문 통계는 Google Analytics 4로 익명 집계될 수 있습니다.</p>
+</div></footer>
+<script src="assets/track.js"></script>
+<script src="assets/shop.js"></script>
+<script src="assets/events.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>

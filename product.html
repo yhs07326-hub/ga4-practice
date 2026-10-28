@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>상품 상세 | Daily Bean</title>
+<!-- ① GA4 연결: 측정 ID는 assets/ga4-config.js 한 곳에만 넣습니다 (모든 페이지 공통) -->
+<script src="assets/ga4-config.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="product">
+<div class="practice-bar">GA4 실습용 가상 쇼핑몰입니다. 실제 판매·결제·개인정보 저장은 없습니다.
+  <button type="button" data-log-toggle>이벤트 로그 보기</button></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html" data-nav="로고">Daily<span>Bean</span></a>
+  <nav class="gnb">
+    <a href="index.html#products" data-nav="원두">원두</a>
+    <a href="index.html#story" data-nav="브랜드 이야기">브랜드 이야기</a>
+    <a href="index.html#faq" data-nav="FAQ">FAQ</a>
+    <a href="contact.html" data-nav="구독 상담">구독 상담</a>
+  </nav>
+  <form class="search" action="search.html" method="get" role="search">
+    <input name="q" placeholder="원두 검색 (예: 예가체프)" aria-label="검색어">
+    <button type="submit">검색</button>
+  </form>
+  <a class="cart-link" href="cart.html" data-nav="장바구니">장바구니 <b id="cart-count">0</b></a>
+</div></header>
+<main>
+
+<section><div class="wrap">
+  <div class="detail">
+    <div class="art" id="p-art"></div>
+    <div>
+      <p class="eyebrow" id="p-meta"></p>
+      <h1 id="p-name"></h1>
+      <p class="sub" id="p-note"></p>
+      <p style="font-size:26px;font-weight:800" id="p-price"></p>
+      <p>수량 <span class="qty"><button type="button" id="qty-minus">−</button><span id="p-qty">1</span><button type="button" id="qty-plus">+</button></span></p>
+      <p style="display:flex;gap:8px;flex-wrap:wrap">
+        <button class="btn btn-primary" type="button" id="add-to-cart">장바구니 담기</button>
+        <button class="btn btn-ghost" type="button" id="buy-now">바로 구매</button>
+        <button class="btn btn-soft" type="button" id="add-to-wishlist">♡ 찜하기</button>
+        <button class="btn btn-soft" type="button" id="share-btn" data-share="product">공유</button>
+      </p>
+      <p class="note">3만원 이상 무료배송 · 매주 월요일 로스팅</p>
+    </div>
+  </div>
+  <div class="tabs">
+    <button class="tab-btn on" type="button" data-tab="상세정보">상세정보</button>
+    <button class="tab-btn" type="button" data-tab="추출가이드">추출 가이드</button>
+    <button class="tab-btn" type="button" data-tab="배송교환">배송·교환</button>
+  </div>
+  <div class="tab-panel on" data-panel="상세정보"><p>산지에서 직접 고른 생두를 소량씩 볶습니다. 로스팅 날짜가 봉투에 찍혀 나갑니다.</p></div>
+  <div class="tab-panel" data-panel="추출가이드"><p>원두 15g, 93도 물 250ml, 2분 30초 안에 내리면 가장 맛있습니다.</p></div>
+  <div class="tab-panel" data-panel="배송교환"><p>화요일 출고, 수령 후 7일 이내 미개봉 상품은 교환할 수 있습니다. (예시 문구)</p></div>
+</div></section>
+<section style="padding-top:0"><div class="wrap">
+  <h2>함께 보면 좋은 원두</h2>
+  <div class="grid" id="related-grid"></div>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div>
+    <a class="logo" href="index.html" style="color:#fff">Daily<span>Bean</span></a>
+    <p>매주 볶은 원두를 문 앞까지. (가상 브랜드)</p>
+    <p><a href="assets/daily-bean-brochure.pdf" download>원두 가이드 PDF 받기</a></p>
+  </div>
+  <div>
+    <strong>고객센터</strong>
+    <ul>
+      <li><a href="tel:010-0000-0000">전화 문의 010-0000-0000</a></li>
+      <li><a href="#" id="kakao-chat">카카오톡 상담하기</a></li>
+      <li><a href="contact.html" data-cta="footer">구독 상담 신청</a></li>
+    </ul>
+  </div>
+  <div>
+    <strong>SNS · 매장</strong>
+    <ul>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a></li>
+      <li><a href="https://map.naver.com/" target="_blank" rel="noopener">네이버 지도에서 매장 보기</a></li>
+    </ul>
+  </div>
+  <p class="legal">이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않으며, 표기된 상품·가격·후기·연락처는 예시입니다.
+  입력한 내용은 어디에도 저장되지 않습니다. 방문 통계는 Google Analytics 4로 익명 집계될 수 있습니다.</p>
+</div></footer>
+<script src="assets/track.js"></script>
+<script src="assets/shop.js"></script>
+<script src="assets/events.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>

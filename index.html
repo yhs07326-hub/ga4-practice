@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Daily Bean | 매주 볶은 원두 구독</title>
+<!-- ① GA4 연결: 측정 ID는 assets/ga4-config.js 한 곳에만 넣습니다 (모든 페이지 공통) -->
+<script src="assets/ga4-config.js"></script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
+<div class="practice-bar">GA4 실습용 가상 쇼핑몰입니다. 실제 판매·결제·개인정보 저장은 없습니다.
+  <button type="button" data-log-toggle>이벤트 로그 보기</button></div>
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="index.html" data-nav="로고">Daily<span>Bean</span></a>
+  <nav class="gnb">
+    <a href="index.html#products" data-nav="원두">원두</a>
+    <a href="index.html#story" data-nav="브랜드 이야기">브랜드 이야기</a>
+    <a href="index.html#faq" data-nav="FAQ">FAQ</a>
+    <a href="contact.html" data-nav="구독 상담">구독 상담</a>
+  </nav>
+  <form class="search" action="search.html" method="get" role="search">
+    <input name="q" placeholder="원두 검색 (예: 예가체프)" aria-label="검색어">
+    <button type="submit">검색</button>
+  </form>
+  <a class="cart-link" href="cart.html" data-nav="장바구니">장바구니 <b id="cart-count">0</b></a>
+</div></header>
+<main>
+
+<section class="hero"><div class="wrap">
+  <div>
+    <p class="eyebrow">Fresh roasted every week</p>
+    <h1>볶은 지 3일 된 원두를<br>매주 문 앞까지</h1>
+    <p>취향 테스트 한 번이면 이번 주 원두를 골라 드립니다. 첫 구독은 20% 할인.</p>
+    <div class="actions">
+      <a class="btn btn-primary" href="#products" data-cta="hero">이번 주 원두 고르기</a>
+      <a class="btn btn-ghost" href="contact.html" data-cta="hero_secondary">구독 상담 받기</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <svg viewBox="0 0 320 220" role="img" aria-label="커피 잔 일러스트">
+      <rect x="0" y="0" width="320" height="220" rx="18" fill="#f3e9df"/>
+      <path d="M80 80 h140 v60 a50 50 0 0 1 -50 50 h-40 a50 50 0 0 1 -50 -50z" fill="#6b3e26"/>
+      <path d="M220 95 h18 a22 22 0 0 1 0 44 h-18" stroke="#6b3e26" stroke-width="12" fill="none"/>
+      <ellipse cx="150" cy="80" rx="70" ry="12" fill="#c9783b"/>
+      <path d="M125 60 q10 -20 0 -40 M150 60 q10 -20 0 -40 M175 60 q10 -20 0 -40" stroke="#c9783b" stroke-width="5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </div>
+</div></section>
+
+<section style="padding-top:28px;padding-bottom:0"><div class="wrap">
+  <div class="promo" data-promo-id="P-2610" data-promo-name="첫 구독 20% 할인">
+    <div><strong>첫 구독 20% 할인</strong><br><span>주문서에서 쿠폰 코드를 입력하세요</span></div>
+    <span class="code">BEAN20</span>
+    <span>
+      <button class="btn btn-sm btn-soft" type="button" data-copy-coupon="BEAN20">쿠폰 코드 복사</button>
+      <a class="btn btn-sm" href="product.html?id=DB-03" data-promo-click>할인 원두 보기</a>
+    </span>
+  </div>
+</div></section>
+
+<section id="products"><div class="wrap">
+  <p class="eyebrow">Best</p>
+  <h2>이번 주 베스트 원두</h2>
+  <p class="sub">카드를 누르면 상세로, "담기"를 누르면 바로 장바구니에 담깁니다.</p>
+  <div class="grid" id="product-grid"></div>
+</div></section>
+
+<section class="story" id="story"><div class="wrap">
+  <div>
+    <p class="eyebrow">Brand film</p>
+    <h2>로스팅부터 배송까지, 20초</h2>
+    <p class="sub">영상을 끝까지 보면 GA4에 video_complete 이벤트가 남습니다.</p>
+    <a class="btn btn-ghost" href="assets/daily-bean-brochure.pdf" download>원두 가이드 PDF 받기</a>
+  </div>
+  <video controls preload="metadata" playsinline data-video-title="Daily Bean 브랜드 필름" poster="assets/brand-film-poster.jpg">
+    <source src="assets/brand-film.webm" type="video/webm">
+    <source src="assets/brand-film.mp4" type="video/mp4">
+  </video>
+</div></section>
+
+<section id="reviews"><div class="wrap">
+  <p class="eyebrow">Reviews</p>
+  <h2>구독자 후기 (예시)</h2>
+  <div class="reviews">
+    <div class="review"><div class="stars">★★★★★</div><p>아침마다 향이 달라서 출근이 기다려져요.</p><span class="note">김*진 · 3개월 구독</span></div>
+    <div class="review"><div class="stars">★★★★★</div><p>드립백이 사무실에서 인기 최고입니다.</p><span class="note">박*우 · 드립백</span></div>
+    <div class="review"><div class="stars">★★★★☆</div><p>산미 있는 원두를 좋아하면 예가체프 추천!</p><span class="note">이*아 · 예가체프</span></div>
+    <div class="review hidden"><div class="stars">★★★★★</div><p>로스팅 날짜가 적혀 있어서 믿음이 가요.</p><span class="note">최*민 · 하우스 블렌드</span></div>
+    <div class="review hidden"><div class="stars">★★★★★</div><p>구독 주기 바꾸기가 쉬워서 좋아요.</p><span class="note">정*호 · 6개월 구독</span></div>
+    <div class="review hidden"><div class="stars">★★★★☆</div><p>500g이 생각보다 오래 갑니다.</p><span class="note">한*리 · 하우스 블렌드</span></div>
+  </div>
+  <p style="text-align:center;margin-top:18px"><button class="btn btn-soft" type="button" id="review-more">리뷰 더보기</button></p>
+</div></section>
+
+<section style="background:#fff"><div class="wrap">
+  <p class="eyebrow">Newsletter</p>
+  <h2>새 원두 소식 받기</h2>
+  <p class="sub">한 달에 두 번, 새로 들어온 원두를 알려 드립니다. (연습용: 이메일은 저장되지 않습니다)</p>
+  <form id="newsletter-form" class="inline-form" novalidate>
+    <input type="email" placeholder="이메일 주소" aria-label="이메일 주소" required>
+    <button class="btn btn-primary" type="submit">구독하기</button>
+  </form>
+</div></section>
+
+<section id="faq" class="faq"><div class="wrap">
+  <p class="eyebrow">FAQ</p>
+  <h2>자주 묻는 질문</h2>
+  <details><summary>원두는 언제 볶나요?</summary><p>매주 월요일에 볶아 화요일에 보냅니다.</p></details>
+  <details><summary>분쇄도 선택이 되나요?</summary><p>홀빈, 드립용, 에스프레소용 중에서 고를 수 있습니다.</p></details>
+  <details><summary>구독은 언제든 멈출 수 있나요?</summary><p>다음 배송 3일 전까지 마이페이지에서 멈출 수 있습니다.</p></details>
+  <details><summary>배송비는 얼마인가요?</summary><p>3만원 이상 무료, 그 외 3,000원입니다.</p></details>
+  <p style="margin-top:20px"><button class="btn btn-ghost btn-sm" type="button" data-share="page">이 페이지 링크 공유하기</button></p>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap" style="text-align:center">
+  <h2>어떤 원두가 맞을지 모르겠다면</h2>
+  <p class="sub">취향을 알려 주시면 바리스타가 골라 드립니다.</p>
+  <a class="btn btn-primary" href="contact.html" data-cta="bottom">무료 구독 상담 신청</a>
+</div></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+  <div>
+    <a class="logo" href="index.html" style="color:#fff">Daily<span>Bean</span></a>
+    <p>매주 볶은 원두를 문 앞까지. (가상 브랜드)</p>
+    <p><a href="assets/daily-bean-brochure.pdf" download>원두 가이드 PDF 받기</a></p>
+  </div>
+  <div>
+    <strong>고객센터</strong>
+    <ul>
+      <li><a href="tel:010-0000-0000">전화 문의 010-0000-0000</a></li>
+      <li><a href="#" id="kakao-chat">카카오톡 상담하기</a></li>
+      <li><a href="contact.html" data-cta="footer">구독 상담 신청</a></li>
+    </ul>
+  </div>
+  <div>
+    <strong>SNS · 매장</strong>
+    <ul>
+      <li><a href="https://www.instagram.com/" target="_blank" rel="noopener">인스타그램</a></li>
+      <li><a href="https://map.naver.com/" target="_blank" rel="noopener">네이버 지도에서 매장 보기</a></li>
+    </ul>
+  </div>
+  <p class="legal">이 페이지는 수업 실습용 페이지입니다. 실제 판매·결제는 이루어지지 않으며, 표기된 상품·가격·후기·연락처는 예시입니다.
+  입력한 내용은 어디에도 저장되지 않습니다. 방문 통계는 Google Analytics 4로 익명 집계될 수 있습니다.</p>
+</div></footer>
+<script src="assets/track.js"></script>
+<script src="assets/shop.js"></script>
+<script src="assets/events.js"></script>
+<script src="assets/ui.js"></script>
+</body>
+</html>
