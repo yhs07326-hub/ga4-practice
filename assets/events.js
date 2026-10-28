@@ -146,4 +146,16 @@
 
      ↓ 여기 아래에 코드를 추가하세요 */
 
+  on('#kakao-chat', 'click', function () {
+    track('contact_click', { contact_method: 'kakao' });
+  });
+
+  on('#review-more', 'click', function () {
+    track('review_more', { review_count: document.querySelectorAll('.review.hidden').length });
+  });
+
+  on('.tab-btn', 'click', function () {
+    track('detail_tab_click', { tab_name: this.getAttribute('data-tab') });
+  });
+
 })();
