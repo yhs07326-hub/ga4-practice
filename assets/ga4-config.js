@@ -5,7 +5,7 @@
      이 한 줄만 바꾸면 모든 페이지에 GA4가 연결됩니다.
   ============================================================
 */
-var GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
+var GA4_MEASUREMENT_ID = 'G-RZ0BDCCP2M';
 
 /*
   아래는 GA4가 알려 주는 "Google 태그(gtag.js)" 코드와 똑같은 일을 합니다.
@@ -20,7 +20,7 @@ var GA4_MEASUREMENT_ID = 'G-XXXXXXXXXX';
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
-
+ㅋ
   if (window.GA4_READY) {
     var s = document.createElement('script');
     s.async = true;
