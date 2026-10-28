@@ -20,7 +20,7 @@ var GA4_MEASUREMENT_ID = 'G-RZ0BDCCP2M';
 
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { window.dataLayer.push(arguments); };
-ㅋ
+
   if (window.GA4_READY) {
     var s = document.createElement('script');
     s.async = true;
